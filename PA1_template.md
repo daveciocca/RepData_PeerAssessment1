@@ -2,8 +2,7 @@
 David Ciocca  
 March 20, 2016  
 
-
-1.  Code for reading in the dataset and/or preprocessing the data
+Code for reading in the dataset and/or preprocessing the data
 
 
 ```r
@@ -12,7 +11,7 @@ stepData <- read.csv("activity.csv", header = TRUE)
 ```
 
 
-2.  Histogram of the total number of steps taken each day
+Histogram of the total number of steps taken each day
 
 ```r
 # Plot histogram of steps taken per day
@@ -26,7 +25,7 @@ hist(stepHist,
 ![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)
 
 
-3.  Mean and Median of number of steps taken each day
+Mean and Median of number of steps taken each day
 
 ```r
 # Mean & Median of Steps Per Day
@@ -48,7 +47,7 @@ stepMed
 ```
 
 
-4.  Time series plot of the average number of steps taken
+Time series plot of the average number of steps taken
 
 ```r
 # Time Series plot of average number of steps taken per 5-minute interval
@@ -63,7 +62,7 @@ plot(names(step5), step5, type = "l",
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)
 
 
-5. The 5-minute interval that, on average, contains the maximum number of steps
+The 5-minute interval that, on average, contains the maximum number of steps
 
 ```r
 # 5-minute interval with maximum average number of steps
@@ -77,7 +76,7 @@ max5Time
 ```
 
 
-6.  Code to describe and show a strategy for imputing muissing data
+Code to describe and show a strategy for imputing muissing data
 
 - The code will use the average values for each respective 5-minute interval to
 fill-in missing values.
@@ -102,7 +101,7 @@ newHist <- tapply(newData$steps, newData$date, sum)
 ```
 
 
-7.  Histogram of the total number of steps taken each day after missing values 
+Histogram of the total number of steps taken each day after missing values 
 are imputed
 
 ```r
@@ -116,7 +115,7 @@ hist(newHist,
 ![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)
 
 
-8.  Panel plot comparing average number of steps taken per 5-minute interval across
+Panel plot comparing average number of steps taken per 5-minute interval across
 weekdays and weekends.
 
 ```r
